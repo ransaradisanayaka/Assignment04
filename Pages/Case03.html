@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case 03</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        border-radius: 15px;
+        background-color: blue;
+        position: absolute;
+
+        animation: move 5s ease infinite;
+        animation-direction: alternate;
+      }
+      @keyframes move {
+        0% {
+          top: 0;
+          left: 0;
+          background-color: blue;
+        }
+        25% {
+          top: 0;
+          left: calc(100% - 230px);
+          background-color: yellow;
+          transform: rotate(180deg);
+        }
+        50% {
+          top: calc(100% - 180px);
+          left: calc(100% - 230px);
+          background-color: red;
+          transform: rotate(360deg);
+        }
+        75% {
+          top: calc(100% - 180px);
+          left: 0;
+          background-color: hotpink;
+          transform: rotate(-180deg);
+        }
+        100% {
+          top: 0;
+          left: 0;
+          background-color: orange;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box-01"></div>
+  </body>
+</html>

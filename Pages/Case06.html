@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case 06</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .hero {
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+        background-image: url(/Images/sky.jpg);
+        object-fit: cover;
+        position: relative;
+      }
+      .highway {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 203px;
+        width: 500%;
+        background-image: url(/Images/road.jpg);
+        animation: move-highway 5s linear infinite;
+        position: fixed;
+      }
+      @keyframes move-highway {
+        0% {
+          transform: translateX(0);
+        }
+        70% {
+          transform: translateX(-2100px);
+        }
+        90% {
+          transform: translateX(-2100px);
+        }
+        100% {
+          transform: translateX(-3000px);
+        }
+      }
+      .city {
+        position: absolute;
+        top: 42%;
+        height: 200px;
+        width: 500%;
+        background-image: url(/Images/city.jpg);
+        animation: move-city 5s linear infinite;
+        position: fixed;
+      }
+      @keyframes move-city {
+        0% {
+          transform: translateX(0);
+        }
+        70% {
+          transform: translateX(-2100px);
+        }
+        90% {
+          transform: translateX(-2100px);
+        }
+        100% {
+          transform: translateX(-3000px);
+        }
+      }
+      .car {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 340px;
+        height: 340px;
+        position: fixed;
+      }
+      .car-image {
+        width: 100%;
+      }
+      .wheel {
+        width: 64px;
+        position: absolute;
+        top: 75%;
+        left: 56%;
+        transform: translate(-50%);
+        display: flex;
+      }
+      .wheel img {
+        animation: wheel-move 5s linear infinite;
+      }
+      @keyframes wheel-move {
+        70% {
+          transform: rotate(-270deg);
+        }
+        90% {
+          transform: rotate(-270deg);
+        }
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+      .front-wheel {
+        width: 100%;
+        position: absolute;
+        left: 8px;
+      }
+      .back-wheel {
+        position: absolute;
+        width: 100%;
+        left: -200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="highway"></div>
+      <div class="city"></div>
+      <div class="car">
+        <img class="car-image" src="/Images/car.jpg" alt="car-imge" />
+      </div>
+      <div class="wheel">
+        <img class="back-wheel" src="/Images/wheel.jpg" alt="wheel-imge" />
+        <img class="front-wheel" src="/Images/wheel.jpg" alt="wheel-imge" />
+      </div>
+    </div>
+  </body>
+</html>

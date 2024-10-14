@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case 04</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+      }
+      .water-drop {
+        width: 50px;
+        height: 50px;
+        border: 2.5px solid red;
+        background-color: white;
+        border-radius: 50%;
+
+        animation: move 3s ease-out infinite;
+      }
+      .click-area {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid blue;
+      }
+
+      @keyframes move {
+        0% {
+          width: 20px;
+          height: 20px;
+          opacity: 1;
+        }
+        100% {
+          width: 250px;
+          height: 250px;
+          opacity: 0;
+        }
+      }
+      @keyframes move-02 {
+        0% {
+          width: 20px;
+          height: 20px;
+          opacity: 1;
+        }
+        100% {
+          width: 50px;
+          height: 50px;
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="water-drop"></div>
+    </div>
+  </body>
+</html>
